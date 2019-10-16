@@ -1,1 +1,3 @@
 # Data-Pipelines-with-Airflow
+<h2>Introduction</h2>
+A music streaming company, Sparkify, has decided to introduce more automation and monitoring to their data warehouse ETL pipelines and come to the conclusion that the best tool to achieve this is Apache Airflow. <strong>This project applies Airflow to schedule and monitor ELT pipelines that extract data from S3, stage data in Redshift, and transform data into a fact table and a set of dimensional tables for the use of the analytics team </strong> The high grade data pipelines are dynamic and built from reusable tasks, can be monitored, allow easy backfills, and enable data quality check.

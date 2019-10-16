@@ -27,3 +27,7 @@ The project package contains three major components for the project:
 <li>Do not email on retry</li>
 The graph view is below after configuration:<br>
 ![Examples](example_dag.png)
+<h4>Operators</h4>
+<li>Stage operator: Loads any JSON formatted files from S3 to Amazon Redshift with SQL COPY statement based on the parameters provided, and allows to load timestamped files from S3 based on the execution time and run backfills</li>
+<li>Fact and Dimension Operators: Utilizes the provided SQL helper class to run data transformations to target tables, and allows to switch between append-only and delete-load functionality</li>
+<li>Data Quality Operator: Runs checks on the data after pipelines. Raises an exception and the task should retry and fail eventually if the data quality doesn't meet the expectation</li>

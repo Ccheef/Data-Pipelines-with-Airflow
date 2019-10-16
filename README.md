@@ -25,5 +25,5 @@ The project package contains three major components for the project:
 <li>Retries happen every 5 minutes</li>
 <li>Catchup is turned off</li>
 <li>Do not email on retry</li>
-The graph view is below after configuration:
+The graph view is below after configuration:<br>
 ![Examples](example_dag.png)

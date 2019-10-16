@@ -26,4 +26,4 @@ The project package contains three major components for the project:
 <li>Catchup is turned off</li>
 <li>Do not email on retry</li>
 The graph view is below after configuration:
-![Examples](example-dag.png)
+![Examples](example_dag.png)

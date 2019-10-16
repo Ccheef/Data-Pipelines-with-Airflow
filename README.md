@@ -38,7 +38,7 @@ The graph view is below after configuration:<br>
 
 <h2>Running Instruction</h2>
 <ol>
-<li>Create Redshift cluster and <strong>use create_tables.sql to create tables on Redshift</strong> (can do so on query editor)</li>
+<li>Create Redshift cluster and <strong>must use create_tables.sql to create tables on Redshift</strong> (can do so on query editor)</li>
 <li>Configure Airflow to connect with the AWS Redshift (Use the same credentials when creating cluster and tabels on Redshift)</li>
 <li>Access Airflow UI and run the pipeline tasks</li>
 </ol>

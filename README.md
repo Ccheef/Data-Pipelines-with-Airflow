@@ -10,4 +10,8 @@ Output tables on Redshift: There are two staging tables that stage data directly
 
 -----------------------------------------------------------------------------------------------------
 
-<h2>Airflow Tasks</h2>
+<h2>Project Templates</h2>
+The project package contains three major components for the project:
+<li>The <strong>dag template</strong>  has all the imports and task templates in place, but the task dependencies have not been set</li>
+<li>The <strong>operators</strong> folder with operator templates</li>
+<li>A <strong>helper class</strong> for the SQL transformations</li>

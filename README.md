@@ -12,7 +12,7 @@ Output tables on Redshift: There are two staging tables that stage data directly
 
 <h2>Project Templates</h2>
 The project package contains three major components for the project:
-<li>The <strong>dag template</strong>  has all the imports and task templates in place, but the task dependencies have not been set</li>
+<li>The <strong>dag template</strong>  has all the imports and task templates</li>
 <li>The <strong>operators</strong> folder with operator templates</li>
 <li>A <strong>helper class</strong> for the SQL transformations</li>
 
@@ -25,5 +25,20 @@ The project package contains three major components for the project:
 <li>Retries happen every 5 minutes</li>
 <li>Catchup is turned off</li>
 <li>Do not email on retry</li>
-The graph view is below after configuration:
-![Examples](example-dag.png)
+The graph view is below after configuration:<br>
+
+![Example](https://github.com/Ccheef/Data-Pipelines-with-Airflow/blob/master/example_dag.png)
+
+<h4>Operators</h4>
+<li>Stage operator: Loads any JSON formatted files from S3 to Amazon Redshift with SQL COPY statement based on the parameters provided, and allows to load timestamped files from S3 based on the execution time and run backfills</li>
+<li>Fact and Dimension Operators: Utilizes the provided SQL helper class to run data transformations to target tables, and allows to switch between append-only and delete-load functionality</li>
+<li>Data Quality Operator: Runs checks on the data after pipelines. Raises an exception and the task should retry and fail eventually if the data quality doesn't meet the expectation</li>
+
+-----------------------------------------------------------------------------------------------------
+
+<h2>Running Instruction</h2>
+<ol>
+<li>Create Redshift cluster and <strong>must use create_tables.sql to create tables on Redshift</strong> (can do so on query editor)</li>
+<li>Configure Airflow to connect with the AWS Redshift (Use the same credentials when creating cluster and tabels on Redshift)</li>
+<li>Access Airflow UI and run the pipeline tasks</li>
+</ol>

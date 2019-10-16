@@ -15,3 +15,15 @@ The project package contains three major components for the project:
 <li>The <strong>dag template</strong>  has all the imports and task templates in place, but the task dependencies have not been set</li>
 <li>The <strong>operators</strong> folder with operator templates</li>
 <li>A <strong>helper class</strong> for the SQL transformations</li>
+
+-----------------------------------------------------------------------------------------------------
+
+<h2>Airflow Tasks</h2>
+<h4>Configuring the DAG</h4>
+<li>The DAG does not have dependencies on past runs</li>
+<li>On failure, the task are retried 3 times</li>
+<li>Retries happen every 5 minutes</li>
+<li>Catchup is turned off</li>
+<li>Do not email on retry</li>
+The graph view is below after configuration:
+![Examples](example-dag.png)
